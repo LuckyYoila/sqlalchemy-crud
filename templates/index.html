@@ -20,7 +20,7 @@
             <div class="items-display">
                 {% for item in todos %}
                     <div class="display">
-                        <p> {{item}} </p> <span class="buttons"><a href="{{url_for('update', todo_item=item)}}" id="update-btn">update</a> <a href="{{url_for('delete', todo_item=item)}}" id="delete-btn">delete</a></span>
+                        <p> {{item.todo_item}} </p> <span class="buttons"><a href="{{url_for('update', todo_item=item)}}" id="update-btn">update</a> <a href="{{url_for('delete', todo_item=item)}}" id="delete-btn">delete</a></span>
                     </div>
                 {% endfor %}
             </div>

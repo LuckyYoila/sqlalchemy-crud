@@ -32,13 +32,13 @@ def index():
         db.session.add(todo)
         db.session.commit()
     todos = Todo.query.all()
+
+    for i in todos:
+        print(i.id)
     
     # REVERSE THE LIST FOR LAST ITEMS TO SHOW ON THE TOP AND FIRST ITEM TO SHOW AT THE BOTTOM
         # reveresed_list = todos[::-1]
     reveresed_list = reversed(todos)
-
-
-
 
     return render_template("index.html", todos = reveresed_list)
 
